@@ -64,6 +64,8 @@ class UploadHandlerRecognize(RequestHandler):
 class UploadHandlerSplit(RequestHandler):
     def post(self,param1):
         fileID = param1
+        print (fileID)
+        print (self.request)
         file1 = self.request.files['files'][0]
         original_fname = file1['filename']
         print (original_fname)
